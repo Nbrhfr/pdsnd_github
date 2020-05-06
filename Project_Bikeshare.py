@@ -35,13 +35,11 @@ def get_filters():
     while month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
         month = input("\nWhat month shall be analysed? We have data for Janauary to June. If you want to see all months\n type 'all' otherwise write the name of the respective month: \n").lower()
 
-
-
-
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    while day not in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
         day = str(input("\nIf you want a specific day to be analysed choose Monday, Tuesday, Thursday, Friday, Saturday or Sunday.\n If not type 'all':  \n")).lower()
-
+    while day not in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+    	print("Please enter a correct option: 'all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'")
+    	day = input().lower()
 
     print('-'*40)
     return city, month, day
